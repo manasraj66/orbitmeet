@@ -1,0 +1,1 @@
+.float-emoji{animation:float-up 1.4s ease-out forwards}@keyframes float-up{to{transform:translateY(-80px);opacity:0}}

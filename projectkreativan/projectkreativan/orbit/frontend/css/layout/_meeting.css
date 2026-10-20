@@ -1,0 +1,1 @@
+.meeting{display:grid;grid-template-columns:1fr 320px;min-height:80vh;gap:16px}

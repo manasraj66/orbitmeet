@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Orbit Meet | Video Meetings</title>
+  <meta name="description" content="Create and join online video meetings with Orbit Meet.">
+
+<link rel="stylesheet" href="/static/css/style.css">
+
+<style>
+.meeting-history{max-width:850px;margin:24px auto;display:grid;gap:10px}.history-item{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:#111426;border:1px solid #30344d;border-radius:12px;padding:14px 18px;color:#eef}.history-item span,.history-item small{color:#aeb4cc;font-size:13px}
+</style>
+</head>
+
+<body>
+  <div class="background-glow glow-one"></div>
+  <div class="background-glow glow-two"></div>
+
+  <header class="navbar">
+    <a class="brand" href="/">
+      <span class="brand-icon">◉</span>
+      <span>orbit<span class="brand-light">meet</span></span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="#features">Features</a>
+      <a href="/admin/">Admin</a>
+    </nav>
+
+    <a class="nav-button" href="#start">Get started ↗</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="announcement">
+        <span class="live-dot"></span>
+        YOUR SPACE. YOUR CONVERSATION.
+      </div>
+
+      <h1>
+        Meetings that feel
+        <span class="gradient-text">closer.</span>
+      </h1>
+
+      <p class="hero-description">
+        Bring your team together, share ideas and make every
+        conversation count — wherever you are.
+      </p>
+
+      <div class="meeting-card" id="start">
+        <div class="card-heading">
+          <div>
+            <h2>Ready to connect?</h2>
+            <p>Start a new meeting or join your team.</p>
+          </div>
+          <span class="card-symbol">✦</span>
+        </div>
+
+        <button class="primary-button" id="create">
+          <span>＋</span> Create a new meeting
+          <span class="button-arrow">↗</span>
+        </button>
+
+        <div class="separator">
+          <span></span>
+          <small>OR JOIN WITH A CODE</small>
+          <span></span>
+        </div>
+
+        <div class="join-form">
+          <input
+            id="code"
+            type="text"
+            placeholder="Enter meeting code"
+            autocomplete="off"
+            aria-label="Meeting code"
+          >
+          <button id="join" class="join-button">Join →</button>
+        </div>
+
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+      </div>
+
+      <div class="trust-line">
+        <span>✦</span> Simple to use
+        <span class="trust-divider">·</span>
+        <span>⌁</span> Built for teams
+        <span class="trust-divider">·</span>
+        <span>◈</span> Your own meeting space
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <div class="section-label">MADE FOR BETTER CONVERSATIONS</div>
+
+      <div class="feature-grid">
+        <article class="feature-card">
+          <span class="feature-icon purple">⌘</span>
+          <h3>One-click meetings</h3>
+          <p>Create a room and share its code with your team.</p>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-icon blue">◉</span>
+          <h3>Face-to-face connection</h3>
+          <p>Camera, microphone and screen sharing controls.</p>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-icon pink">✧</span>
+          <h3>Made for your team</h3>
+          <p>A clean workspace with its own identity and admin panel.</p>
+        </article>
+      </div>
+    </section>
+    <section class="features" id="history-section">
+      <div class="section-label">YOUR RECENT ACTIVITY</div>
+      <h2>Meeting history</h2>
+      <p class="hero-description">Recent meetings created on this server.</p>
+      <div id="meeting-history" class="meeting-history"><p>Loading meeting history…</p></div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand footer-brand" href="/">
+      <span class="brand-icon">◉</span> orbitmeet
+    </a>
+    <p>Made for conversations that matter.</p>
+    <span>ORBIT MEET © 2026</span>
+  </footer>
+
+  <script type="module" src="/static/javascript/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1 @@
+export const initials=name=>String(name||'Guest').trim().split(/\s+/).map(x=>x[0]).join('').slice(0,2).toUpperCase(); export const formatCode=code=>String(code||'').toUpperCase().replace(/[^A-Z0-9]/g,'').slice(0,8);

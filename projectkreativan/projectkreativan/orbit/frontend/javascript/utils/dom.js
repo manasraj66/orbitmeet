@@ -1,0 +1,1 @@
+export const $=(s,r=document)=>r.querySelector(s); export const $$=(s,r=document)=>[...r.querySelectorAll(s)]; export function el(tag,props={}){const e=document.createElement(tag);Object.assign(e,props);return e}

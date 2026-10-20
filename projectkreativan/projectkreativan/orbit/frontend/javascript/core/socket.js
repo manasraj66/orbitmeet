@@ -1,0 +1,3 @@
+export async function createMeeting(){ const r=await fetch('/api/create',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:'Host'})}); if(!r.ok) throw new Error(await r.text()); return r.json(); }
+export async function joinMeeting(code){ const r=await fetch('/api/join',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({code,name:'Guest'})}); if(!r.ok) throw new Error(await r.text()); return r.json(); }
+export function connectSocket(room, peer, onMessage){ const ws=new WebSocket(`${location.protocol==='https:'?'wss':'ws'}://${location.host}/ws/${room}/${peer}`); ws.onmessage=e=>onMessage(JSON.parse(e.data)); return ws; }
